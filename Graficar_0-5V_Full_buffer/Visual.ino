@@ -10,7 +10,7 @@ void mensajeInicio(int x, int y, int h) {
   for (int i = 0; i < 100; i++) {
     u8g2.drawBox(x - 50, y + 15, i, h);
     u8g2.sendBuffer();
-    delay(5);
+    delay(1);
   }
 }
 //----------------------------------------------------------------------

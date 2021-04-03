@@ -19,7 +19,12 @@
 //Interface grafica
 #define MAX_X       124     //Valor maximo eje x
 #define MIN_X       45      //Valor minimo eje x
-#define MIN_Y       1        //Valor minimo eje y
+#define MIN_Y       1       //Valor minimo eje y
 #define MAX_Y       58      //Valor maximo eje y
+
+//Timers
+#define PRESCALER   64      //Prescaler del Timer2
+#define CLOCK       16000000//Frecuencia del oscilador del microcontrolador
+#define FREC        1000    //Frecuencia(Hz) para las interrupciones de Timer2
 
 #endif
