@@ -1,4 +1,4 @@
-void mensajeInicio(int x, int y, int h) {
+void mensajeInicio(uint8_t x, uint8_t y, uint8_t h) {
   u8g2.clearBuffer();
   u8g2.setCursor(x - 56, y - 15);
   u8g2.print(F("CaliBeta Graficador"));

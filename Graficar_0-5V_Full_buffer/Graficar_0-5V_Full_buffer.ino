@@ -31,7 +31,7 @@ U8G2_ST7920_128X64_F_SW_SPI u8g2(U8G2_R0, SCK, DATA, CS, U8X8_PIN_NONE);
 float voltaje = 0.0;    //mide el voltaje de la señal analoga
 int contador = 0;       //cuenta las interrupciones del Timer2
 int signalY[] = {0, 0}; //Array para realizar la grafica
-int x = MIN_X;          //Valor eje x de la grafica
+uint8_t x = MIN_X;      //Valor eje x de la grafica
 
 //Variables de control de flujo
 bool refrescar = true; //Controla si se debe refrescar la pantalla
