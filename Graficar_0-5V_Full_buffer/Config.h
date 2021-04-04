@@ -26,5 +26,6 @@
 #define PRESCALER   64      //Prescaler del Timer2
 #define CLOCK       16000000//Frecuencia del oscilador del microcontrolador
 #define FREC        1000    //Frecuencia(Hz) para las interrupciones de Timer2
+#define TIEMPO1     50      //Tiempo para incrementar el eje x de la grafica
 
 #endif

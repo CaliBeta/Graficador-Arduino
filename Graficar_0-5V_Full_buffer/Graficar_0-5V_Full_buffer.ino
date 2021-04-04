@@ -49,6 +49,9 @@ float voltaje = 0.0;    //mide el voltaje de la señal analoga
 int contador = 0;       //cuenta las interrupciones del Timer2
 int signalY[] = {0, 0}; //Array para realizar la grafica
 int x = MIN_X;          //Valor eje x de la grafica
+
+//Variables de control de flujo
+bool refrescar = true; //Controla si se debe refrescar la pantalla
 //----------------------------------------------------------------------
 
 //Configuracion
@@ -99,9 +102,14 @@ void loop() {
   interfaceGrafica(XPOS - 61, YPOS - 29, x, signalY[0], signalY[1]);
 
   if (x > MAX_X) {
+    refrescar = true;
     x = MIN_X;
     u8g2.clearBuffer();
   }
+  else {
+    refrescar = false;
+  }
+
   signalY[1] = signalY[0];
 }
 //----------------------------------------------------------------------
