@@ -28,23 +28,6 @@ U8G2_ST7920_128X64_F_SW_SPI u8g2(U8G2_R0, SCK, DATA, CS, U8X8_PIN_NONE);
 //----------------------------------------------------------------------
 
 //Declaramos las variables globales necesarias
-//Enumeracion para las entradas de la maquina
-enum entrada {
-  DESCONOCIDO,
-  TIME_DIV_MENOS,
-  TIME_DIV_MAS
-};
-
-//Enumeracion para los estados de la maquina
-enum estado {
-  INTERFACE_GRAFICA,
-  CONFIGURACION,
-};
-
-//Variables maquina de estados
-entrada entradaActual;
-estado estadoActual;
-
 float voltaje = 0.0;    //mide el voltaje de la señal analoga
 int contador = 0;       //cuenta las interrupciones del Timer2
 int signalY[] = {0, 0}; //Array para realizar la grafica
@@ -86,7 +69,6 @@ void setup() {
   sei();    //Habilitamos nuevamente las interrupciones globales
 
   //Configuramos el estado inicial del sistema
-  estadoActual = estado::INTERFACE_GRAFICA;
   mensajeInicio(XPOS, YPOS, 10);
   delay(100);
   u8g2.clearBuffer();
